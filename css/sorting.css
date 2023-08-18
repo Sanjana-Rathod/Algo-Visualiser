@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 0px;
+  /* padding: 0 20px 30px 0; */
+  /* line-height: 1.4; */
+  background-color: white;
+  color: white;
+}
+.flex-container{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  transition: 2s all ease;
+}
+
+
+.flex-item{
+  background: purple;
+  border: 1pt solid rgb(208, 204, 204);
+  width: 10px;
+  transition: 0.1s all ease;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+#input{
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+header{
+  margin-top: 0px;
+}
+
+
+nav {
+  background: #1b1b1b;
+  float: top;
+  margin-bottom: 0px;
+  /* box-shadow: 5px 5px 4px #3d3c3c; */
+  /* min-width: 1200px; */
+  min-width: var(--total-width);
+}
+
+button,
+select {
+  color: white;
+  background-color: #1b1b1b;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  /* padding: 8px 15px; */
+}
+
+button:focus,
+select:focus {
+  outline: none;
+}
+
+button:disabled {
+  color: #ddd;
+}
+
+nav:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+nav .logo {
+  float: left;
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+
+nav .logo span {
+  color: #66ffff;
+}
+
+nav ul {
+  float: right;
+  /* margin-right: 40px; */
+  list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  /* float: left; */
+  display: inline-block;
+  background: #1b1b1b;
+  /* margin: 0 2px; */
+}
+
+nav ul li a {
+  color: white;
+  /* line-height: 70px; */
+  text-decoration: none;
+  font-size: 18px;
+  /* padding: 8px 15px; */
+}
+
+nav ul li a :hover {
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+}
+
+.box{
+  position: relative;
+  background-color: white;
+}
+@media only screen and (max-width: 1100px) {
+  .logo {
+      display: none;
+  }
+  .mobile-logo {
+      display: block;
+      background-color: #1b1b1b;
+      /* min-width: 1200px; */
+      min-width: var(--total-width);
+      text-align: center;
+      border: none;
+      outline: none;
+  }
+  .mobile-logo span {
+      color: #66ffff;
+  }
+  .container {
+      /* min-width: 1200px; */
+      min-width: var(--total-width);
+  }
+  nav ul li {
+      float: none;
+  }
+  nav ul li a {
+      font-size: 10px;
+      /* padding: 8px 8px; */
+  }
+}
